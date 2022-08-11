@@ -1,6 +1,6 @@
 {
 	"name": "thaw-dsp",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "Digital signal processing algorithms implemented in TypeScript.",
 	"keywords": [
 		"DCT",
@@ -100,6 +100,7 @@
 		"win32"
 	],
 	"cpu": [
+		"arm",
 		"ia32",
 		"x64"
 	],

@@ -63,9 +63,9 @@ Digital signal processing algorithms implemented in TypeScript.
 [lines-of-code-url]: https://badgen.net/codeclimate/loc/tom-weatherhead/thaw-dsp
 [technical-debt-badge-image]: https://badgen.net/codeclimate/tech-debt/tom-weatherhead/thaw-dsp
 [technical-debt-url]: https://badgen.net/codeclimate/tech-debt/tom-weatherhead/thaw-dsp
-[maintainability-badge-image]: https://api.codeclimate.com/v1/badges/00000000000000000000/maintainability
+[maintainability-badge-image]: https://api.codeclimate.com/v1/badges/1877e6d764091daf1465/maintainability
 [maintainability-url]: https://codeclimate.com/github/tom-weatherhead/thaw-dsp/maintainability
-[test-coverage-badge-image]: https://api.codeclimate.com/v1/badges/00000000000000000000/test_coverage
+[test-coverage-badge-image]: https://api.codeclimate.com/v1/badges/1877e6d764091daf1465/test_coverage
 [test-coverage-url]: https://codeclimate.com/github/tom-weatherhead/thaw-dsp/test_coverage
 [jest-badge-image]: https://img.shields.io/badge/tested_with-jest-99424f.svg
 [jest-url]: https://github.com/facebook/jest

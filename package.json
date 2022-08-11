@@ -1,0 +1,118 @@
+{
+	"name": "thaw-dsp",
+	"version": "0.0.0",
+	"description": "Digital signal processing algorithms implemented in TypeScript.",
+	"keywords": [
+		"DCT",
+		"DSP",
+		"FFT",
+		"TypeScript",
+		"utilities"
+	],
+	"private": false,
+	"homepage": "https://github.com/tom-weatherhead/thaw-dsp#readme",
+	"repository": "github:tom-weatherhead/thaw-dsp",
+	"bugs": {
+		"url": "https://github.com/tom-weatherhead/thaw-dsp/issues"
+	},
+	"source": "src/main.ts",
+	"browser": "dist/thaw-dsp.js",
+	"main": "dist/thaw-dsp.cjs.js",
+	"module": "dist/thaw-dsp.esm.js",
+	"types": "dist/types/main.d.ts",
+	"files": [
+		"dist/thaw-dsp*.js",
+		"dist/types/**/*.d.ts"
+	],
+	"man": [],
+	"directories": {
+		"// lib": "lib",
+		"// bin": "",
+		"man": "",
+		"doc": "",
+		"example": "",
+		"test": "test"
+	},
+	"scripts": {
+		"all": "npm run rebuild && npm pack && npm run deploy",
+		"// allw": "rmdir /Q /S coverage & rmdir /Q /S lib & npm run lint & npm run build & npm test & npm pack & move /Y thaw-dsp-*.tgz C:\\git\\npm-packages\\",
+		"clean-build-products": "rm -rf coverage && rm -rf dist",
+		"clean-offline": "npm run clean-build-products",
+		"clean-packages": "rm -rf node_modules && rm -f package-lock.json",
+		"clean": "npm run clean-build-products && npm run clean-packages",
+		"rebuild": "npm run clean && npm i && npm run build-and-test",
+		"// rebuild-offline": "npm run clean-build-products && npm run build-and-test",
+		"build-and-test": "npm run prettier-check && npm run lint && npm run build && npm run rollup && npm test",
+		"prettier-check": "prettier --check \"**/*.js\" \"**/*.ts\"",
+		"prettier-list": "prettier --list-different \"**/*.js\" \"**/*.ts\"",
+		"prettier-format": "prettier --write \"**/*.js\" \"**/*.ts\"",
+		"lint": "eslint . --ext .js --ext .ts",
+		"build": "tsc",
+		"rollup": "rollup --config",
+		"test": "jest --detectOpenHandles --forceExit",
+		"deploy": "eval mv $npm_package_name-$npm_package_version.tgz $(echo $npm_package_config_deploy_target_dir)/",
+		"// prepare": "npm run build",
+		"prepublishOnly": "npm test && npm run lint",
+		"preversion": "npm run lint",
+		"version": "npm run prettier-format && git add -A src",
+		"postversion": "git push && git push --tags",
+		"loc": "git ls-files | grep -v package-lock.json | tr -d '\\r' | tr '\\n' '\\0' | xargs -0 wc -l",
+		"re": "npm run prettier-format && npm run clean-build-products && npm run build-and-test && npm pack && npm run deploy",
+		"f": "npm run clean && npm i && npm run re",
+		"start": "npm run all"
+	},
+	"config": {
+		"deploy_target_dir": "$NPM_PKG_DIR"
+	},
+	"publishConfig": {},
+	"dependencies": {},
+	"devDependencies": {
+		"@babel/core": "^7.18.10",
+		"@babel/preset-env": "^7.18.10",
+		"@babel/preset-typescript": "^7.18.6",
+		"@types/eslint": "^8.4.5",
+		"@types/jest": "^28.1.6",
+		"@types/node": "^18",
+		"@typescript-eslint/eslint-plugin": "^5.33.0",
+		"@typescript-eslint/parser": "^5.33.0",
+		"@typescript-eslint/typescript-estree": "^5.33.0",
+		"eslint": "^8.21.0",
+		"jest": "^28.1.3",
+		"prettier": "^2.7.1",
+		"rollup": "^2.77.2",
+		"rollup-plugin-terser": "^7.0.2",
+		"typescript": "^4.7.4",
+		"typescript-eslint-language-service": "^5.0.0"
+	},
+	"peerDependencies": {},
+	"// The correct name is bundledDependencies": true,
+	"// The name bundleDependencies is also honoured": true,
+	"// bundledDependencies": "... is an array of package names",
+	"// bundledDependencies: See": "https://docs.npmjs.com/cli/v6/configuring-npm/package-json#bundleddependencies",
+	"bundledDependencies": [],
+	"optionalDependencies": {},
+	"engines": {
+		"node": ">= 10"
+	},
+	"os": [
+		"darwin",
+		"linux",
+		"win32"
+	],
+	"cpu": [
+		"ia32",
+		"x64"
+	],
+	"author": "Tom Weatherhead <thaw@2hrd4u.org> (https://github.com/tom-weatherhead)",
+	"contributors": [
+		"Anonymous <conspirator@deep.state.gov>",
+		"Assimilated Captain <locutus@b.org>",
+		"Austin James <president@warehouse.serendip.com>",
+		"Autonomous Weapons Systems Unlimited <killer@robots.com>",
+		"Buddy Guy <deadbeef@decafbad.gov>",
+		"Deprecated <deadc0de@obso1337.org>",
+		"Loitering Munition <smart@bom.com>",
+		"Sgt. Pepper <shoot1st@thinkl8r.mil>"
+	],
+	"license": "MIT"
+}

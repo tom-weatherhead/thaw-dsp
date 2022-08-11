@@ -1,4 +1,4 @@
 // src/main.ts
 
 export * from './dct';
-// export * from './fft';
+export * from './fft';
